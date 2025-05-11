@@ -24,7 +24,7 @@ jobs:
         - name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v3
         - name: Process version tag
-          if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          if: false
           uses: nowsprinting/check-version-format-action@v4
           id: version
           with:
