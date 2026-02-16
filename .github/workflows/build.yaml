@@ -70,10 +70,10 @@ jobs:
     name: Build ${{ matrix.os }} ${{ matrix.arch }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-go@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
         with:
-          go-version: '^1.24.0'
+          go-version: '^1.25.7'
       - name: Set env
         run: echo RELEASE_VERSION=${GITHUB_REF:10} >> $GITHUB_ENV
       - name: Build
